@@ -1,0 +1,86 @@
+---
+title: "Managing your dotfiles"
+subtitle: "RCS Seminar"
+date: "2024-10-08"
+format:
+  revealjs:
+    embed-resources: true
+    theme: dark
+
+authors:
+ - name: Miren Radia
+ - name: Jack Atkinson
+---
+## What are dotfiles? {.smaller}
+
+* Dotfiles are personal configuration files that lie in your home directory.
+* They are named as such because they typically either
+  * Have filenames beginning with a "`.`".
+  * Live in a subdirectory of your home directory that begins with a "`.`".
+* Of course this means they are hidden on Unix-like systems.
+
+### Examples {.smaller}
+
+Some common examples you might have come across:
+
+:::: {.columns}
+
+::: {.column width="30%"}
+* `~/.bashrc`
+* `~/.ssh/config`[^*]
+:::
+
+::: {.column width="70%"}
+* `~/.vimrc` or `~/.emacs`
+* `~/.gitconfig` or `~/.config/git/config`
+:::
+
+::::
+
+[^*]: It's wise to not make this file public _and_ unencrypted.
+
+## Why manage your dotfiles?
+
+* Over time you might customize these configuration files to best suit your
+workflow, aesthetics and preferences.
+* Managing your dotfiles using version control and remote repository hosting
+has many of the same benefits as doing so for other code:
+  * Backups.
+  * Makes it simpler to determine and revert breaking changes.
+  * History can add context to why a file is the way it is.
+* The main additional benefit is making it [**much
+  easier**]{style="color:orange;"} to move your configuration to a new machine.
+
+## Frameworks/Tools
+
+There are many frameworks/tools to help you manage your dotfiles:
+
+:::: {.columns}
+
+::: {.column width="50%"}
+* [[**Bare git repository**]{style="color:orange;"}](https://www.atlassian.com/git/tutorials/dotfiles)
+* [rcm](https://github.com/thoughtbot/rcm)
+* [dotbot](https://github.com/anishathalye/dotbot)
+* ...
+:::
+
+::: {.column width="50%"}
+* [[**chezmoi**]{style="color:orange;"}](https://www.chezmoi.io/)
+* [vcsh](https://github.com/RichiH/vcsh)
+* [yadm](https://yadm.io/)
+:::
+
+::::
+
+We will discuss the [first two]{style="color:orange;"}.
+
+See
+[https://dotfiles.github.io/utilities/](https://dotfiles.github.io/utilities/)
+for a more comprehensive list.
+
+## Bare git repository (Jack)
+
+## chezmoi (Miren)
+
+
+# Demo time
