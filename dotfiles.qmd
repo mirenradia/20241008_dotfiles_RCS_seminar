@@ -84,7 +84,7 @@ for a more comprehensive list.
 
 * [chezmoi](https://www.chezmoi.io/) is a popular[^s] open-source tool that
 makes it straightforward to manage your dotfiles.
-* It offers several features beyond using a bare git repo:
+* It offers several features[^c] beyond using a bare git repo:
   * Single branch with templating to manage differences between
   machines
   * Integration with password managers/full file encryption for secrets
@@ -95,9 +95,9 @@ makes it straightforward to manage your dotfiles.
   dependencies; no root access required
 * Great [documentation](https://www.chezmoi.io/user-guide/command-overview/).
 * Powerful but straightforward to get started with.
-* See [here](https://www.chezmoi.io/comparison-table/) for a comparison with
-other tools.
 
 [^s]: 13024 stars on GitHub on 02/10/2024
+[^c]: See [here](https://www.chezmoi.io/comparison-table/) for a comparison with
+other tools.
 
 # Demo time
