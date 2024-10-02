@@ -80,7 +80,24 @@ for a more comprehensive list.
 
 ## Bare git repository (Jack)
 
-## chezmoi (Miren)
+## chezmoi (Miren) ![Chezmoi logo](https://www.chezmoi.io/logo.svg) {.smaller}
 
+* [chezmoi](https://www.chezmoi.io/) is a popular manager tool that
+makes it straightforward to manage and apply your dotfiles.
+* It offers several features beyond using a bare git repo:
+  * Single branch with templating to manage differences between
+  machines
+  * Integration with password managers to store and recover secrets
+  * Full file encryption (using gpg or age)
+  * Ability to run scripts (once or every time you apply)
+* Installation is easy:
+  * Runs on all popular OSs and architectures
+  * Distributed as a single statically-linked binary with no external
+  dependencies
+  * Does not require root access
+  * Can install and apply with one command
+* Great [documentation](https://www.chezmoi.io/user-guide/command-overview/).
+* See [here](https://www.chezmoi.io/comparison-table/) for a comparison with
+other tools.
 
 # Demo time
