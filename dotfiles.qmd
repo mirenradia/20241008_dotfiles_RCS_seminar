@@ -51,7 +51,7 @@ has many of the same benefits as doing so for other code:
 * The main additional benefit is making it [**much
   easier**]{style="color:orange;"} to move your configuration to a new machine.
 
-## Frameworks/Tools
+## Frameworks/Tools {.smaller}
 
 There are many frameworks/tools to help you manage your dotfiles:
 
@@ -78,7 +78,55 @@ See
 [https://dotfiles.github.io/utilities/](https://dotfiles.github.io/utilities/)
 for a more comprehensive list.
 
-## Bare git repository (Jack)
+## Bare git repository (Jack) {.smaller}
+
+When I:
+
+* had more time than I do now, and
+* wanted to learn more about git
+
+I followed a thread from hackernews about managing dotfiles.\
+This is based on that with some modifications of my own.
+
+Simple concept:
+
+* put dotfiles in a git repo and clone to a new machine.
+* Set up different branches for different machines.
+  * Changes you want everywhere in `main` synced to rest.
+
+## Bare git repository (Jack) {.smaller}
+
+The devil of details:
+
+* The repo is in `.dotfiles/` in `$HOME`, not `.git/`.
+  * Places files where you want them avoiding potential confusion.
+* The git command is aliased to `dotfiles` so you can use '`dotfiles`' instead of '`git`'.
+  * This distinguishes is as a unique setup.
+* Only explicitly tracked files are listed.
+  * This avoids pollution with `$HOME` being very busy.
+
+* Unautomated parts:
+  * gpg protected files need to be decrypted manually.
+    * Could probably build a script if you want to.
+
+
+## Bare git repository (Jack) {.smaller}
+
+Because I am a good RSE you can view things at
+[github/jatkinson1000/dotfiles](https://github.com/jatkinson1000/dotfiles)
+with information on how to setup and move to other machines, and references.
+
+Have a peruse through my dotfiles - this is how I learnt many things that appear
+in mine. I have tried to be very verbose in my comments for this reason.
+
+Summary: If you want to learn some stuff about git, gpg, scripting and
+derive satisfaction from hacking things together, like seeing how things work,
+and are happy with 'good enough' give it a go.
+
+If you want something that will work out the box with lots of features...
+
+
+
 
 ## chezmoi (Miren) ![Chezmoi logo](https://www.chezmoi.io/logo.svg) {.smaller}
 
