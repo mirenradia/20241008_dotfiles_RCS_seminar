@@ -1200,7 +1200,7 @@ Jack Atkinson
 <li>The main additional benefit is making it <span style="color:orange;"><strong>much easier</strong></span> to move your configuration to a new machine.</li>
 </ul>
 </section>
-<section id="frameworkstools" class="slide level2">
+<section id="frameworkstools" class="slide level2 smaller">
 <h2>Frameworks/Tools</h2>
 <p>There are many frameworks/tools to help you manage your dotfiles:</p>
 <div class="columns">
@@ -1221,8 +1221,55 @@ Jack Atkinson
 <p>We will discuss the <span style="color:orange;">first two</span>.</p>
 <p>See <a href="https://dotfiles.github.io/utilities/">https://dotfiles.github.io/utilities/</a> for a more comprehensive list.</p>
 </section>
-<section id="bare-git-repository-jack" class="slide level2">
+<section id="bare-git-repository-jack" class="slide level2 smaller">
 <h2>Bare git repository (Jack)</h2>
+<p>When I:</p>
+<ul>
+<li>had more time than I do now, and</li>
+<li>wanted to learn more about git</li>
+</ul>
+<p>I followed a thread from hackernews about managing dotfiles.<br>
+This is based on that with some modifications of my own.</p>
+<p>Simple concept:</p>
+<ul>
+<li>put dotfiles in a git repo and clone to a new machine.</li>
+<li>Set up different branches for different machines.
+<ul>
+<li>Changes you want everywhere in <code>main</code> synced to rest.</li>
+</ul></li>
+</ul>
+</section>
+<section id="bare-git-repository-jack-1" class="slide level2 smaller">
+<h2>Bare git repository (Jack)</h2>
+<p>The devil of details:</p>
+<ul>
+<li>The repo is in <code>.dotfiles/</code> in <code>$HOME</code>, not <code>.git/</code>.
+<ul>
+<li>Places files where you want them avoiding potential confusion.</li>
+</ul></li>
+<li>The git command is aliased to <code>dotfiles</code> so you can use ‘<code>dotfiles</code>’ instead of ‘<code>git</code>’.
+<ul>
+<li>This distinguishes is as a unique setup.</li>
+</ul></li>
+<li>Only explicitly tracked files are listed.
+<ul>
+<li>This avoids pollution with <code>$HOME</code> being very busy.</li>
+</ul></li>
+<li>Unautomated parts:
+<ul>
+<li>gpg protected files need to be decrypted manually.
+<ul>
+<li>Could probably build a script if you want to.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="bare-git-repository-jack-2" class="slide level2 smaller">
+<h2>Bare git repository (Jack)</h2>
+<p>Because I am a good RSE you can view things at <a href="https://github.com/jatkinson1000/dotfiles">github/jatkinson1000/dotfiles</a> with information on how to setup and move to other machines, and references.</p>
+<p>Have a peruse through my dotfiles - this is how I learnt many things that appear in mine. I have tried to be very verbose in my comments for this reason.</p>
+<p>Summary: If you want to learn some stuff about git, gpg, scripting and derive satisfaction from hacking things together, like seeing how things work, and are happy with ‘good enough’ give it a go.</p>
+<p>If you want something that will work out the box with lots of features…</p>
 </section>
 <section id="chezmoi-miren-chezmoi-logo" class="slide level2 smaller">
 <h2>chezmoi (Miren) <svg id="svg_ff9adbe440fb351b4773" role="img" aria-label="Chezmoi logo" alt="Chezmoi logo" xml:space="preserve" width="12.1918mm" height="9.9906mm" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 1219 999">
