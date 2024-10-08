@@ -144,6 +144,22 @@ makes it straightforward to manage your dotfiles.
 * Great [documentation](https://www.chezmoi.io/user-guide/command-overview/).
 * Powerful but straightforward to get started with.
 
+## chezmoi (Miren) ![Chezmoi logo](https://www.chezmoi.io/logo.svg) {.smaller}
+
+* Structure (see [concepts page](https://www.chezmoi.io/reference/concepts/)):
+  * _config file_: usually `~/.config/chezmoi/chezmoi.toml`
+    * contains machine-specific configuration (for templates)
+    * can prompt for variables when setting up on a new system
+  * _source directory_: usually `~/.local/share/chezmoi`
+    * the git repository with your dotfiles
+  * _destination directory_: usually `~`
+    * current state is called the _destination state_
+* chezmoi computes the desired _target state_ from the source directory and
+  config. It can then work out the diff the destination state and apply it.
+* Have a look at [my dotfiles](https://github.com/mirenradia/dotfiles) for
+  inspiration and ideas. I can only apologize it's not in as nice a state as
+  Jack's!
+
 [^s]: 13024 stars on GitHub on 02/10/2024
 [^c]: See [here](https://www.chezmoi.io/comparison-table/) for a comparison with
 other tools.
